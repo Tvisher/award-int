@@ -1,0 +1,222 @@
+/* Обнуление стилей (Reset CSS) */
+
+/* Убираем отступы, поля и рамки для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    /* Для корректного расчета размеров с padding и border */
+}
+
+/* Сбрасываем стили шрифтов и наследование */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Наследуем цвет текста от родителя */
+}
+
+/* Сбрасываем стили списков */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Убираем кавычки у blockquote и q */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+/* Сбрасываем стили таблиц */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Убираем стандартные рамки у кнопок и элементов форм */
+button,
+input,
+select,
+textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+    /* Наследуем шрифт */
+    font-size: inherit;
+    /* Наследуем размер шрифта */
+    color: inherit;
+    /* Наследуем цвет текста */
+}
+
+/* Убираем стрелочки у input type="number" */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Убираем стандартный стиль placeholder */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: inherit;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: inherit;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: inherit;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: inherit;
+}
+
+/* Сбрасываем курсор для отключенных элементов */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: default;
+}
+
+/* Убираем выделение при клике (для некоторых браузеров) */
+*:focus {
+    outline: none;
+}
+
+/* Дополнительные сбросы для HTML5 семантических элементов */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Сбрасываем встроенные аудио и видео элементы */
+audio,
+video {
+    display: inline-block;
+}
+
+/* Предотвращаем выделение текста при двойном клике */
+// *,
+::before,
+::after {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* Standard */
+}
