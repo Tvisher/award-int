@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'AkzidenzGroteskPro';
-    src: url('../fonts/AkzidenzGroteskPro-Regular.woff2') format('woff2');
+    src: url('../fonts/akzidenzgroteskpro_regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -407,7 +407,7 @@ main {
 
 .section-title {
     font-size: 48px;
-    line-height: 100%;
+    line-height: 120%;
     font-family: 'AkzidenzGroteskPro';
     font-weight: 500;
     text-transform: uppercase;
@@ -418,6 +418,10 @@ main {
 .plates {
     padding: 48px 0;
     padding-bottom: 96px;
+
+    .section-title {
+        margin-top: 48px;
+    }
 }
 
 .plates-block {
@@ -429,7 +433,7 @@ main {
 
 .plate {
     width: calc(33.333% - 16px);
-    padding: 16px 24px;
+    padding: 16px 24px 24px;
     border-radius: 16px;
     background: #FA0D48;
     background: linear-gradient(45deg, rgba(250, 13, 72, 1) 0%, rgba(176, 6, 107, 1) 100%);
@@ -440,7 +444,7 @@ main {
     font-size: 96px;
     font-family: 'AkzidenzGroteskPro';
     font-weight: 400;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .plate__small {
@@ -552,7 +556,7 @@ main {
 }
 
 .nominations {
-    padding-top: 72px;
+    padding-top: 44px;
     padding-bottom: 48px;
 
     .section-title {
@@ -616,7 +620,13 @@ main {
         font-size: 24px;
         font-weight: 600;
         line-height: 150%;
-        margin-bottom: 64px;
+        margin-bottom: 40px;
+    }
+
+    .description-footer__btn {
+        max-width: 512px;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -787,7 +797,7 @@ main {
 }
 
 
-.animation-wrapper {
+.rocket-line {
     position: absolute;
     width: 2139px;
     bottom: 30px;
@@ -827,5 +837,112 @@ main {
 
     100% {
         offset-distance: 0%;
+    }
+}
+
+.price-list {
+    display: flex;
+    gap: 24px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+
+.price-item {
+    background: #605C6E;
+    position: relative;
+    padding: 2px;
+    padding-top: 48px;
+    border-radius: 24px;
+    width: calc(33.333% - 16px);
+
+    &:nth-child(1) {
+        background: linear-gradient(90deg,
+                #CD9DFF 0%,
+                #CF94F5 11%,
+                #D57DDC 29%,
+                #DF57B5 51%,
+                #E544A1 61%,
+                #EB3078 73%,
+                #FD0110 99%,
+                #E7002D 100%);
+
+        .price-item__sum {
+            font-size: 80px;
+        }
+
+        .price-item__head {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8 24L24 8M21.3333 22.6667C21.3333 23.0203 21.4738 23.3594 21.7239 23.6095C21.9739 23.8595 22.313 24 22.6667 24C23.0203 24 23.3594 23.8595 23.6095 23.6095C23.8595 23.3594 24 23.0203 24 22.6667C24 22.313 23.8595 21.9739 23.6095 21.7239C23.3594 21.4738 23.0203 21.3333 22.6667 21.3333C22.313 21.3333 21.9739 21.4738 21.7239 21.7239C21.4738 21.9739 21.3333 22.313 21.3333 22.6667ZM8 9.33333C8 9.68696 8.14048 10.0261 8.39052 10.2761C8.64057 10.5262 8.97971 10.6667 9.33333 10.6667C9.68696 10.6667 10.0261 10.5262 10.2761 10.2761C10.5262 10.0261 10.6667 9.68696 10.6667 9.33333C10.6667 8.97971 10.5262 8.64057 10.2761 8.39052C10.0261 8.14048 9.68696 8 9.33333 8C8.97971 8 8.64057 8.14048 8.39052 8.39052C8.14048 8.64057 8 8.97971 8 9.33333Z' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+        }
+    }
+
+    &:nth-child(2) {
+        .price-item__head {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 24.3338H15C16.0609 24.3338 17.0783 23.9124 17.8284 23.1622C18.5786 22.4121 19 21.3947 19 20.3338V7.00049M19 7.00049L13.6667 12.3338M19 7.00049L24.3333 12.3338' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+        }
+    }
+
+    &:nth-child(3) {
+        .price-item__head {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.66699 25.3335H14.667C15.7279 25.3335 16.7453 24.9121 17.4954 24.1619C18.2456 23.4118 18.667 22.3944 18.667 21.3335V12.0002M18.667 12.0002L13.3337 17.3335M18.667 12.0002L24.0003 17.3335M13.3337 10.6668L18.667 5.3335L24.0003 10.6668' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+        }
+    }
+}
+
+.price-item__inner {
+    background-color: #24222E;
+    border-radius: 24px;
+    padding: 40px 32px;
+}
+
+.price-item__head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: left 10px center;
+}
+
+.gradient-line {
+    width: 100%;
+    margin: 16px 0;
+    height: 1px;
+    background: linear-gradient(90.00deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 100%);
+}
+
+.price-item__plate {
+    color: #D8D7D9;
+    padding: 7px 12px;
+    background-color: #3A3843;
+    border-radius: 8px;
+    font-size: 20px;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.price-section {
+    padding: 96px 0;
+}
+
+.price-item__sum {
+    font-size: 64px;
+    font-family: 'AkzidenzGroteskPro';
+    font-weight: 400;
+    line-height: 100%;
+
+    span {
+        font-size: 48px;
+        font-family: 'AkzidenzGroteskPro';
+        font-weight: 500;
     }
 }
