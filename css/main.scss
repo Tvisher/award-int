@@ -361,9 +361,9 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
-    position: relative;
     width: fit-content;
     margin: 0 auto;
+    position: relative;
 
     &::before {
         position: absolute;
@@ -617,5 +617,215 @@ main {
         font-weight: 600;
         line-height: 150%;
         margin-bottom: 64px;
+    }
+}
+
+.benefits {
+    padding: 48px 0;
+
+    .section-title {
+        margin-bottom: 135px;
+        margin-top: 64px;
+    }
+}
+
+.benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .list-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: calc(25% - 18px);
+        min-height: 400px;
+        padding: 24px;
+        border-radius: 24px;
+        background: #620091;
+        background: linear-gradient(46deg, rgba(98, 0, 145, 1) 0%, rgba(175, 5, 107, 1) 100%);
+
+        &:nth-child(1) .list-item-image {
+            top: -4%;
+            right: 0;
+            width: 90%;
+            height: 56%;
+        }
+
+        &:nth-child(2) .list-item-image {
+            top: -8%;
+            right: 0;
+            width: 86%;
+            height: 62%;
+        }
+
+        &:nth-child(3) .list-item-image {
+            top: -7%;
+            right: 0;
+            width: 97%;
+            height: 64%;
+        }
+
+        &:nth-child(4) .list-item-image {
+            top: -8%;
+            right: 0;
+            width: 93%;
+            height: 64%;
+        }
+    }
+
+    .list-item__name {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 12px;
+        line-height: 130%;
+    }
+
+    .list-item__descr {
+        font-size: 20px;
+        line-height: 130%;
+        font-weight: 400;
+    }
+
+
+
+}
+
+.list-item-image {
+    position: absolute;
+
+}
+
+.list-item-image__wrapper {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.member-way {
+    position: relative;
+    padding: 48px 0;
+    padding-bottom: 200px;
+
+    .section-title {
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+}
+
+.member-way__list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    &::before {
+        position: absolute;
+        background-image: url(../img/red-elepse-v3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+        left: 50%;
+        top: 50%;
+        width: 1500px;
+        height: 1500px;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .list-item {
+        width: calc(16.666% - 20.83px);
+    }
+
+    .list-item__plate {
+        margin-bottom: 16px;
+        width: fit-content;
+        overflow: hidden;
+        border-radius: 8px;
+        padding: 1px;
+        background: linear-gradient(90deg,
+                #CD9DFF 0%,
+                #CF94F5 11%,
+                #D57DDC 29%,
+                #DF57B5 51%,
+                #E544A1 61%,
+                #EB3078 73%,
+                #FD0110 99%,
+                #E7002D 100%);
+
+        span {
+            line-height: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 12px;
+            background-color: #24222E;
+            border-radius: 8px;
+            display: block;
+        }
+
+    }
+
+    .list-item__name {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 16px;
+    }
+
+    .list-item__descr {
+        line-height: 150%;
+        font-size: 20px;
+        font-weight: 400;
+        color: #D8D7D9
+    }
+}
+
+
+.animation-wrapper {
+    position: absolute;
+    width: 2139px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+}
+
+.path-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.rocket {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    position: absolute;
+    width: clamp(10px, 5.2vw, 100px);
+    height: clamp(10px, 5.2vw, 100px);
+    top: 0;
+    left: 0;
+    offset-rotate: auto 225deg;
+    offset-path: path("M2134.04 34.7665L2134.19 34.7623C2075.1 51.3894 2045.12 72.5414 1986.02 78.4436C1808.29 96.1632 1643.26 -6.42787 1454.75 4.80924C1382.23 9.13186 1318.95 28.3822 1261.28 47.9183C1214.67 63.7393 1155.39 99.1414 1092.37 106.676C924.119 126.983 788.313 22.6565 599.805 23.7939C342.626 25.2996 229.909 181.47 4.00111 119.779");
+    animation: move-rocket 15s infinite linear;
+}
+
+@keyframes move-rocket {
+
+    0% {
+        offset-distance: 100%;
+    }
+
+    100% {
+        offset-distance: 0%;
     }
 }
