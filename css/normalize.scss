@@ -104,8 +104,8 @@ a {
 }
 
 /* Сбрасываем стили списков */
-ol,
-ul {
+ol:has(class),
+ul:has(class) {
     list-style: none;
 }
 
