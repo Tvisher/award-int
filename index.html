@@ -39,7 +39,7 @@
                         <span class="main-section__subtitle">XVII Международная премия в области корпоративных
                             коммуникаций</span>
                         <h1 class="main-section__title">
-                            Интеркомм <br>2026
+                            Интер<br>комм <br>2026
                         </h1>
                         <div class="icon-titles">
                             <div class="icon-title">
@@ -109,7 +109,7 @@
         <section class="timer">
             <div class="container">
                 <div class="timer__title">Прием заявок открыт до 21 сентября. Осталось:</div>
-                <div class="timer__blocks">
+                <div class="timer__blocks" data-timer-date="21.09.2026">
                     <div class="timer__block">
                         <div class="block-num">00</div>
                         <div class="block_descr">дней</div>
@@ -1154,39 +1154,40 @@
                 <div class="form-tmp__descr">
                     Оставьте контакты, и мы свяжемся с вами в ближайшее время
                 </div>
-                <form class="form__body">
+                <div class="form__body">
                     <label class="form-label">
                         <textarea class="form-field" placeholder="Ваш вопрос"></textarea>
                     </label>
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Имя, Фамилия">
+                        <input type="text" class="form-field" placeholder="Имя, Фамилия" name="name">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Компания">
+                        <input type="text" class="form-field" placeholder="Компания" name="company">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Телефон">
+                        <input type="text" class="form-field" placeholder="Телефон" name="phone">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Почта">
+                        <input type="text" class="form-field" placeholder="Почта" name="email">
                     </label>
-
+                </div>
+                <div class="form__footer">
                     <label class="agree-label">
-                        <input type="checkbox" name="policy">
+                        <input type="checkbox" name="policy-1">
                         <p>Я прочитал(а) <a href="#" target="_blank">Политику в отношении обработки персональных
                                 данных</a> ООО «Интеркомм»</p>
                     </label>
 
                     <label class="agree-label">
-                        <input type="checkbox" name="policy">
+                        <input type="checkbox" name="policy-2">
                         <p>Даю своё согласие на обработку моих персональных данных в соответствии с Политикой в
                             отношении обработки персональных данных ООО «Интеркомм»</p>
                     </label>
                     <button type="submit" class="color-btn submit-btn">Отправить</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -1198,38 +1199,41 @@
                     <div class="form-tmp__title">Укажите данные для оплаты заявки</div>
                     <div class="form-tmp__close"></div>
                 </div>
-                <form class="form__body">
+                <div class="form__body">
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Имя, Фамилия">
+                        <input type="text" class="form-field" placeholder="Имя, Фамилия" name="name">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Название компании">
+                        <input type="text" class="form-field" placeholder="Название компании" name="company">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Количество заявок">
+                        <input type="number" class="form-field" placeholder="Количество заявок"
+                            name="applications-count">
                     </label>
 
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Почта">
+                        <input type="text" class="form-field" placeholder="Почта" name="email">
                     </label>
                     <label class="form-label">
-                        <input type="text" class="form-field" placeholder="Телефон">
+                        <input type="text" class="form-field" placeholder="Телефон" name="phone">
                     </label>
+                </div>
+                <div class="form__footer">
                     <label class="agree-label">
-                        <input type="checkbox" name="policy">
+                        <input type="checkbox" name="policy-1">
                         <p>Я прочитал(а) <a href="#" target="_blank">Политику в отношении обработки персональных
                                 данных</a> ООО «Интеркомм»</p>
                     </label>
 
                     <label class="agree-label">
-                        <input type="checkbox" name="policy">
+                        <input type="checkbox" name="policy-2">
                         <p>Даю своё согласие на обработку моих персональных данных в соответствии с Политикой в
                             отношении обработки персональных данных ООО «Интеркомм»</p>
                     </label>
                     <button type="submit" class="color-btn submit-btn">Отправить</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
