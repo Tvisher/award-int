@@ -159,10 +159,12 @@ body {
     text-align: center;
     padding: 1.625rem 3rem;
     border-radius: 1rem;
-    display: block;
     width: fit-content;
     transition: transform .2s ease-in-out;
     will-change: transform;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         transform: translateY(-0.125rem);
@@ -1705,7 +1707,7 @@ body {
     right: 0;
     top: 0;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
     z-index: 200;
     display: flex;
     background-color: rgba(36, 34, 46, .75);
@@ -2118,6 +2120,7 @@ body {
             font-size: 16px;
             line-height: 16px;
             padding: 16px;
+
         }
 
         .fixed-sidebar {
@@ -2225,6 +2228,10 @@ body {
     .juri-item .juri-item__image.partner-image {
         height: 45vw;
     }
+
+    .contact-block__wrap .wrap-link {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 380px) {
@@ -2236,7 +2243,4 @@ body {
         font-size: 4rem;
     }
 
-    .contact-block__wrap .wrap-link {
-        font-size: 1.5rem;
-    }
 }
