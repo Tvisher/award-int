@@ -2011,6 +2011,10 @@ body {
 }
 
 @media (max-width: 680px) {
+    .header {
+        padding: 8px;
+    }
+
     .second-section__video {
         width: 100%;
         height: 52vw;
