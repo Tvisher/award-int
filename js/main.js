@@ -32,17 +32,20 @@ $(".faq-item__head").on("click", function () {
 const mobileMenu = document.querySelector('.mobile-menu');
 document.addEventListener('pointerdown', (e) => {
     const target = e.target;
+    if (target.closest('.modal-template') && !target.closest('.modal-content') || target.closest('.form-tmp__close') || target.closest('.close-modal-btn')) {
+        const activeModal = target.closest('.modal-template.show');
+        activeModal && activeModal.classList.remove('show');
+    }
+})
+
+document.addEventListener('click', (e) => {
+    const target = e.target;
     if (target.closest('[data-show-modal]')) {
         e.preventDefault();
         const modalType = target.closest('[data-show-modal]').getAttribute('data-show-modal');
         console.log(modalType);
         const currentModal = document.querySelector(`[data-modal="${modalType}"]`);
         currentModal.classList.add('show');
-    }
-
-    if (target.closest('.modal-template') && !target.closest('.modal-content') || target.closest('.form-tmp__close') || target.closest('.close-modal-btn')) {
-        const activeModal = target.closest('.modal-template.show');
-        activeModal && activeModal.classList.remove('show');
     }
 
     if (target.closest('.mob-menu-btn')) {
@@ -53,11 +56,10 @@ document.addEventListener('pointerdown', (e) => {
         mobileMenu.classList.remove('show');
     }
 
-
     if (target.closest('.mobile-menu__nav .header-link')) {
         setTimeout(() => { mobileMenu.classList.remove('show'); }, 300)
     }
-}, { capture: true })
+})
 
 
 
