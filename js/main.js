@@ -1,7 +1,3 @@
-const lenis = new Lenis({
-    autoRaf: true,
-});
-
 
 const juriSlider = new Swiper('.juri-slider', {
     slidesPerView: 'auto',
