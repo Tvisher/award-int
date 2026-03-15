@@ -1,3 +1,8 @@
+const lenis = new Lenis({
+    autoRaf: true,
+});
+
+
 const juriSlider = new Swiper('.juri-slider', {
     slidesPerView: 'auto',
     navigation: {
@@ -15,7 +20,6 @@ const juriSlider = new Swiper('.juri-slider', {
 
 
 
-
 $(".faq-item__head").on("click", function () {
     const toggleBody = $(this).parent('.faq-item').find('.faq-item__body');
     $(this).toggleClass('open')
@@ -25,22 +29,35 @@ $(".faq-item__head").on("click", function () {
 });
 
 
-
+const mobileMenu = document.querySelector('.mobile-menu');
 document.addEventListener('pointerdown', (e) => {
     const target = e.target;
     if (target.closest('[data-show-modal]')) {
-        e.preventDefault()
+        e.preventDefault();
         const modalType = target.closest('[data-show-modal]').getAttribute('data-show-modal');
         console.log(modalType);
         const currentModal = document.querySelector(`[data-modal="${modalType}"]`);
         currentModal.classList.add('show');
     }
 
-    if (target.closest('.modal-template') && !target.closest('.modal-content') || target.closest('.form-tmp__close')) {
+    if (target.closest('.modal-template') && !target.closest('.modal-content') || target.closest('.form-tmp__close') || target.closest('.close-modal-btn')) {
         const activeModal = target.closest('.modal-template.show');
         activeModal && activeModal.classList.remove('show');
     }
-})
+
+    if (target.closest('.mob-menu-btn')) {
+        mobileMenu.classList.add('show');
+    }
+
+    if (target.closest('.mobile-menu__close')) {
+        mobileMenu.classList.remove('show');
+    }
+
+
+    if (target.closest('.mobile-menu__nav .header-link')) {
+        setTimeout(() => { mobileMenu.classList.remove('show'); }, 300)
+    }
+}, { capture: true })
 
 
 
@@ -86,8 +103,6 @@ function initTimer() {
 }
 
 document.addEventListener('DOMContentLoaded', initTimer);
-
-
 
 
 
@@ -171,9 +186,10 @@ $(document).ready(function () {
             },
             error: function () {
                 console.log('Ошибка');
+
             },
             complete: function () {
-                $btn.prop('disabled', false).text('Отправить');
+                $('[data-modal="consultation"]').addClass('complited');
             }
         });
     });
@@ -230,7 +246,7 @@ $(document).ready(function () {
         };
 
 
-        $btn.prop('disabled', true).text('Обработка...');
+        $btn.prop('disabled', true).text('Отправка...');
 
         $.ajax({
             url: '/ajax/application.php',
@@ -244,7 +260,7 @@ $(document).ready(function () {
                 console.log('Ошибка');
             },
             complete: function () {
-                $btn.prop('disabled', false).text('Отправить');
+                $('[data-modal="application"]').addClass('complited');
             }
         });
     });
