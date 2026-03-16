@@ -266,3 +266,21 @@ $(document).ready(function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieModal = document.querySelector('.coockie-modal');
+    const acceptBtn = document.querySelector('.coockie-modal__btn');
+
+    if (localStorage.getItem('cookieAccepted') === 'true') {
+        cookieModal.style.display = 'none';
+    } else {
+        cookieModal.classList.add('show');
+    }
+
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieAccepted', 'true');
+        cookieModal.style.opacity = '0';
+        setTimeout(() => {
+            cookieModal.style.display = 'none';
+        }, 300);
+    });
+});
